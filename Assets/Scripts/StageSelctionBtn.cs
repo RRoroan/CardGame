@@ -5,18 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class StageSelctionBtn : MonoBehaviour
 {
-    public GameObject StageSelction;
+    public GameObject GameBtn;
+    public GameObject HobbyBtn;
+
     public AudioClip ButtonClick;
     AudioSource audioSource2;
+
     public void StageSelect()
     {
-        if (StageSelction != null)
+        if (GameBtn != null)
         {
-            StageSelction.SetActive(true);
+            GameBtn.SetActive(true);
+            HobbyBtn.SetActive(true);
             audioSource2 = GetComponent<AudioSource>();
             audioSource2.PlayOneShot(ButtonClick);
-        }
-        
 
+
+        }
+
+        gameObject.SetActive(false);
+    }
+
+    public void SceneChage()
+    {
+        audioSource2 = GetComponent<AudioSource>();
+        audioSource2.PlayOneShot(ButtonClick);
+        SceneManager.LoadScene("MainScene");
     }
 }

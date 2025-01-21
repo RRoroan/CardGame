@@ -6,10 +6,17 @@ using UnityEngine.SceneManagement;
 public class StageSelctionBtn : MonoBehaviour
 {
     public GameObject StageSelction;
-    
-
+    public AudioClip ButtonClick;
+    AudioSource audioSource;
     public void StageSelect()
     {
-        StageSelction.SetActive(true);
+        if (StageSelction != null)
+        {
+            StageSelction.SetActive(true);
+            audioSource = GetComponent<AudioSource>();
+            audioSource.PlayOneShot(ButtonClick);
+        }
+        
+
     }
 }

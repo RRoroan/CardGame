@@ -11,6 +11,7 @@ public class LoadScene : MonoBehaviour
     }
     public void RetryScene()
     {
-        SceneManager.LoadScene("MainScene");
+        string sceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(sceneName);
     }
 }

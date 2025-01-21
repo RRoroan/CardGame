@@ -7,19 +7,28 @@ public class StageSelctionBtn : MonoBehaviour
 {
     public GameObject GameBtn;
     public GameObject HobbyBtn;
-   
+    public GameObject StartBtn;
+
+
+    private void Start()
+    {
+
+    }
     public void StageSelect()
     {
+        
+        
+
         if (GameBtn != null)
         {
             
-           
             GameBtn.SetActive(true);
             HobbyBtn.SetActive(true);
-            
         }
 
-        gameObject.SetActive(false);
+        StartBtn.SetActive(false);
+
+
     }
 
     public void SceneChange()

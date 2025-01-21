@@ -4,8 +4,9 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - StageSelction: {instanceID: 0}
-  - ButtonClick: {fileID: 8300000, guid: 34eecadf8aa546a4196e70efb3e1d5cc, type: 3}
+  - GameBtn: {instanceID: 0}
+  - HobbyBtn: {instanceID: 0}
+  - ButtonClick: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

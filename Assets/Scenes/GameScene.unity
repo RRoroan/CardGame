@@ -158,6 +158,7 @@ MonoBehaviour:
   firstCard: {fileID: 0}
   secondCard: {fileID: 0}
   cardCount: 0
+  clip: {fileID: 8300000, guid: 17ea3144a0884084d8b63d672fc7df4c, type: 3}
 --- !u!4 &45288099
 Transform:
   m_ObjectHideFlags: 0

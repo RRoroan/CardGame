@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public int cardCount;
 
     public static GameManager instance;
+    AudioSource audioSource;
+    public AudioClip clip;
 
     private void Awake()
     {
@@ -25,6 +27,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         Time.timeScale = 1.0f;
         successUI.SetActive(false);
         failUI.SetActive(false);
@@ -47,6 +50,7 @@ public class GameManager : MonoBehaviour
     {
         if (firstCard.idx == secondCard.idx && firstCard.cdx + secondCard.cdx != 3)
         {
+            audioSource.PlayOneShot(clip);
             firstCard.DestroyCard();
             secondCard.DestroyCard();
             cardCount -= 2;

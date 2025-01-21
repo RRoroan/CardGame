@@ -575,12 +575,12 @@ GameObject:
   m_Component:
   - component: {fileID: 27129696590830513}
   m_Layer: 5
-  m_Name: SuccessUI
+  m_Name: GameSuccessUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &27129696590830513
 RectTransform:
   m_ObjectHideFlags: 0
@@ -648,6 +648,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5049576084766037700}
     m_Modifications:
+    - target: {fileID: 3020470093940129380, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 102b315990505ad4886837c25e3f6a10, type: 3}
     - target: {fileID: 6875872127712285772, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
       propertyPath: m_Name
       value: Info (2)
@@ -750,10 +754,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5049576084766037700}
     m_Modifications:
+    - target: {fileID: 833927088670867800, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d8427e9a796385f43a74bef056f71bb1, type: 3}
+    - target: {fileID: 3020470093940129380, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 961498685c72a244b9439d0e8b491e7b, type: 3}
+    - target: {fileID: 6197413452879190588, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
+      propertyPath: m_Text
+      value: "\uBC30\uB9AC\uC548"
+      objectReference: {fileID: 0}
     - target: {fileID: 6875872127712285772, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
       propertyPath: m_Name
       value: Info
       objectReference: {fileID: 0}
+    - target: {fileID: 7350210683482641030, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c0e16991811bf6b4fbc30267e8f9d25a, type: 3}
     - target: {fileID: 7357406287267984715, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -852,10 +872,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5049576084766037700}
     m_Modifications:
+    - target: {fileID: 833927088670867800, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d358dfd6083034e44a8b79e7cbad629e, type: 3}
+    - target: {fileID: 3020470093940129380, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 78c9907662c4b6e4ca1c303d5b24339e, type: 3}
+    - target: {fileID: 6197413452879190588, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
+      propertyPath: m_Text
+      value: "\uCD5C\uC885\uBBFC"
+      objectReference: {fileID: 0}
     - target: {fileID: 6875872127712285772, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
       propertyPath: m_Name
       value: Info (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7350210683482641030, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dd697000c06bc35448ba95360f655ed8, type: 3}
     - target: {fileID: 7357406287267984715, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -954,10 +990,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5049576084766037700}
     m_Modifications:
+    - target: {fileID: 833927088670867800, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1a541cf5fead8cf4f8835c14f36101fb, type: 3}
+    - target: {fileID: 3020470093940129380, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a13cf684f16d2f1449045b434ed8bbdb, type: 3}
+    - target: {fileID: 6197413452879190588, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
+      propertyPath: m_Text
+      value: "\uAE40\uAE30\uC11D"
+      objectReference: {fileID: 0}
     - target: {fileID: 6875872127712285772, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
       propertyPath: m_Name
       value: Info (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7350210683482641030, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f5cd2d431cdd2b54e8bfc293c53bfb82, type: 3}
     - target: {fileID: 7357406287267984715, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1056,9 +1108,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5049576084766037700}
     m_Modifications:
+    - target: {fileID: 833927088670867800, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020470093940129380, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6197413452879190588, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
+      propertyPath: m_Text
+      value: "\uD55C\uC885\uC6B0"
+      objectReference: {fileID: 0}
     - target: {fileID: 6875872127712285772, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
       propertyPath: m_Name
       value: Info (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7350210683482641030, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
+      propertyPath: m_Sprite
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7357406287267984715, guid: 3aeda1a0911a75342a5cbb4e42770e3c, type: 3}
       propertyPath: m_Pivot.x

@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
 
     public void Matched()
     {
-        if (firstCard.idx == secondCard.idx)
+        if (firstCard.idx == secondCard.idx && firstCard.cdx + secondCard.cdx != 3)
         {
             firstCard.DestroyCard();
             secondCard.DestroyCard();

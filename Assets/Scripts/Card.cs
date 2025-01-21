@@ -20,9 +20,9 @@ public class Card : MonoBehaviour
 
     public void Setting(int num, string sceneName)
     {
-        idx = num/4;
-        cdx = num%4;
-        if(sceneName=="MainScene")
+        idx = num / 4;
+        cdx = num % 4;
+        if (sceneName == "MainScene")
         { fName = "Game"; }
         else
         { fName = "Hobby"; }
@@ -30,32 +30,32 @@ public class Card : MonoBehaviour
         frontImage.material = Resources.Load<Material>($"FrontEdges\\Edge{idx}");
     }
 
-    public void OpenCard() { }
-    //{
-    //    if (GameManager.instance.secondCard == null)
-    //    {
-    //        audioSource.PlayOneShot(clip);
-    //        anim.SetBool("isOpen", true);
+    public void OpenCard()
+    {
+        if (GameManager.instance.secondCard == null)
+        {
+            audioSource.PlayOneShot(clip);
+            CardFlip();
 
-    //        if (GameManager.instance.firstCard == null)
-    //        { GameManager.instance.firstCard = this; }
-    //        else
-    //        {
-    //            GameManager.instance.secondCard = this;
-    //            GameManager.instance.Matched();
-    //        }
-    //    }
-    //}
+            if (GameManager.instance.firstCard == null)
+            { GameManager.instance.firstCard = this; }
+            else
+            {
+                GameManager.instance.secondCard = this;
+                GameManager.instance.Matched();
+            }
+        }
+    }
 
     public void DestroyCard() { Destroy(gameObject, 1f); }
 
     public void CloseCard()
     {
-        anim.SetBool("isOpen", false);
         Invoke("CardFlip", 1f);
     }
     void CardFlip()
     {
+        anim.SetBool("isOpen", !anim.GetBool("isOpen"));
         front.SetActive(!front.activeSelf);
         back.SetActive(!back.activeSelf);
     }

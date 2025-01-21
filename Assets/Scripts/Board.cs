@@ -28,6 +28,6 @@ public class Board : MonoBehaviour
 
         //transform.localScale = canvers.;
 
-        //GameManager.instance.cardCount = arr.Length;
+        GameManager.instance.cardCount = arr.Length;
     }
 }

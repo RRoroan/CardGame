@@ -7,14 +7,14 @@ public class StageSelctionBtn : MonoBehaviour
 {
     public GameObject StageSelction;
     public AudioClip ButtonClick;
-    AudioSource audioSource;
+    AudioSource audioSource2;
     public void StageSelect()
     {
         if (StageSelction != null)
         {
             StageSelction.SetActive(true);
-            audioSource = GetComponent<AudioSource>();
-            audioSource.PlayOneShot(ButtonClick);
+            audioSource2 = GetComponent<AudioSource>();
+            audioSource2.PlayOneShot(ButtonClick);
         }
         
 

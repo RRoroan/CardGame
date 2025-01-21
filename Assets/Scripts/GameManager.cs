@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    //public GameObject successUI;
-    //public GameObject failUI;
+    public GameObject successUI;
+    public GameObject failUI;
 
     float time = 30f;
     public Text timeTxt;
@@ -26,8 +26,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1.0f;
-        //successUI.SetActive(false);
-        //failUI.SetActive(false);
+        successUI.SetActive(false);
+        failUI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -66,11 +66,11 @@ public class GameManager : MonoBehaviour
 
     void ShowSuccessUI()
     {
-        //successUI.SetActive(true);
+        successUI.SetActive(true);
     }
 
     void ShowFailUI()
     {
-        //failUI.SetActive(true);
+        failUI.SetActive(true);
     }
 }

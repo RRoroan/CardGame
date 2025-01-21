@@ -22,7 +22,7 @@ public class StageSelctionBtn : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void SceneChage()
+    public void SceneChange()
     {
         SceneManager.LoadScene("MainScene");
     }

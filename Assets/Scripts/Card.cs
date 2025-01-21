@@ -30,7 +30,7 @@ public class Card : MonoBehaviour
         frontImage.material = Resources.Load<Material>($"FrontEdges\\Edge{idx}");
     }
 
-    //public void OpenCard()
+    public void OpenCard() { }
     //{
     //    if (GameManager.instance.secondCard == null)
     //    {

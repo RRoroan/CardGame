@@ -8,7 +8,7 @@ public class StageSelctionBtn : MonoBehaviour
     public GameObject GameBtn;
     public GameObject HobbyBtn;
     public GameObject StartBtn;
-
+    public AudioClip clip;
 
     private void Start()
     {
@@ -17,6 +17,7 @@ public class StageSelctionBtn : MonoBehaviour
 
     public void StageSelect()
     {
+        AudioManager.instance.ButtonPress(clip);
         GameBtn.SetActive(true);
         HobbyBtn.SetActive(true);
         StartBtn.SetActive(false);
@@ -26,10 +27,12 @@ public class StageSelctionBtn : MonoBehaviour
     {
         if (GameBtn != null)
         {
+            AudioManager.instance.ButtonPress(clip);
             SceneManager.LoadScene("GameScene");
         }
         else if (HobbyBtn != null)
         {
+            AudioManager.instance.ButtonPress(clip);
             SceneManager.LoadScene("HobbyScene");
         }
     }

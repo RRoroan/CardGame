@@ -30,9 +30,8 @@ public class AudioManager : MonoBehaviour
         audioSource1.Play();
     }
 
-    public void ButtonPress()
+    public void ButtonPress(AudioClip clip)
     {
-        Input.GetMouseButtonDown(0);
         audioSource1.PlayOneShot(ButtonClip);
     }
     

@@ -5,18 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour
 {
+    public AudioClip clip;
     public void ReturnScene()
     {
+        AudioManager.instance.ButtonPress(clip);
         SceneManager.LoadScene("StartScene");
     }
     public void RetryScene()
     {
+        AudioManager.instance.ButtonPress(clip);
         string sceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(sceneName);
-    }
-
-    public void ClickSound()
-    {
-        AudioManager.instance.ButtonPress();
     }
 }

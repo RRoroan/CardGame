@@ -22,7 +22,7 @@ public class Card : MonoBehaviour
     {
         idx = num / 4;
         cdx = num % 4;
-        if (sceneName == "MainScene")
+        if (sceneName == "GameScene")
         { fName = "Game"; }
         else
         { fName = "Hobby"; }

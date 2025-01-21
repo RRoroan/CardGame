@@ -14,4 +14,9 @@ public class LoadScene : MonoBehaviour
         string sceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(sceneName);
     }
+
+    public void ClickSound()
+    {
+        AudioManager.instance.ButtonPress();
+    }
 }

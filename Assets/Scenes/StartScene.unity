@@ -1193,7 +1193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cb18bea4227c5b4b8ad1dd341e478bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameBtn: {fileID: 0}
+  GameBtn: {fileID: 1200864295}
   HobbyBtn: {fileID: 0}
   StartBtn: {fileID: 0}
 --- !u!95 &1200864299
@@ -1678,7 +1678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameBtn: {fileID: 0}
-  HobbyBtn: {fileID: 0}
+  HobbyBtn: {fileID: 2053930029}
   StartBtn: {fileID: 0}
 --- !u!95 &2053930033
 Animator:

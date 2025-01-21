@@ -16,23 +16,20 @@ public class StageSelctionBtn : MonoBehaviour
     }
     public void StageSelect()
     {
-        
-        
-
-        if (GameBtn != null)
-        {
-            
-            GameBtn.SetActive(true);
-            HobbyBtn.SetActive(true);
-        }
-
+        GameBtn.SetActive(true);
+        HobbyBtn.SetActive(true);
         StartBtn.SetActive(false);
-
-
     }
 
     public void SceneChange()
     {
-        SceneManager.LoadScene("MainScene");
+        if (GameBtn != null)
+        {
+            SceneManager.LoadScene("GameScene");
+        }
+        else if (HobbyBtn != null)
+        {
+            SceneManager.LoadScene("HobbyScene");
+        }
     }
 }

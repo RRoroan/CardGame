@@ -12,8 +12,9 @@ public class StageSelctionBtn : MonoBehaviour
 
     private void Start()
     {
-
+        Time.timeScale = 1.0f;
     }
+
     public void StageSelect()
     {
         GameBtn.SetActive(true);

@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public GameObject successUI;
     public GameObject failUI;
 
-    float time = 30f;
+    float time = 45f;
     public Text timeTxt;
 
     public Card firstCard, secondCard;

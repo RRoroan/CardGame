@@ -5,7 +5,7 @@ using UnityEngine;
 public class Card : MonoBehaviour
 {
     public int idx = 0, cdx = 0;
-    string name;
+    string fName;
     public SpriteRenderer frontImage;
     public GameObject front, back;
 
@@ -23,10 +23,10 @@ public class Card : MonoBehaviour
         idx = num/4;
         cdx = num%4;
         if(sceneName=="MainScene")
-        { name = "Game"; }
+        { fName = "Game"; }
         else
-        { name = "Hobby"; }
-        frontImage.sprite = Resources.Load<Sprite>($"FrontImages\\{name}\\{idx}\\{cdx}");
+        { fName = "Hobby"; }
+        frontImage.sprite = Resources.Load<Sprite>($"FrontImages\\{fName}\\{idx}\\{cdx}");
         frontImage.material = Resources.Load<Material>($"FrontEdges\\Edge{idx}");
     }
 

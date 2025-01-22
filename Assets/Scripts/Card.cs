@@ -24,29 +24,32 @@ public class Card : MonoBehaviour
 
     public void Setting(int num, string sceneName)
     {
-        idx = num / 4;
-        cdx = num % 4;
-        if (sceneName == "GameScene")
+        switch (sceneName)
         {
-            fName = "Game";
-            frontImage.sprite = Resources.Load<Sprite>($"FrontImages\\{fName}\\{idx}\\{cdx}");
+            case "GameScene":
+            case "GameSceneH":
+                fName = "Game";
+                break;
+            case "HobbyScene":
+            case "HobbySceneH":
+                fName = "Hobby";
+                break;
+            case "HiddenScene":
+                fName = "Hidden";
+                break;
+        }
+        if (fName == "Hidden")
+        {
+            idx = cdx = num;
+
+            frontImage.sprite = Resources.Load<Sprite>($"FrontImages\\{fName}\\{cdx}");
             frontImage.material = Resources.Load<Material>($"FrontEdges\\Edge{idx}");
         }
-        else if (sceneName == "HobbyScene")
+        else
         {
-            fName = "Hobby";
-            frontImage.sprite = Resources.Load<Sprite>($"FrontImages\\{fName}\\{idx}\\{cdx}");
-            frontImage.material = Resources.Load<Material>($"FrontEdges\\Edge{idx}");
-        }
-        else if (sceneName == "GameSceneH")
-        {
-            fName = "Game";
-            frontImage.sprite = Resources.Load<Sprite>($"FrontImages\\{fName}\\{idx}\\{cdx}");
-            frontImage.material = Resources.Load<Material>($"FrontEdges\\Edge{idx}");
-        }
-        else if (sceneName == "HobbySceneH")
-        {
-            fName = "Hobby";
+            idx = num / 4;
+            cdx = num % 4;
+
             frontImage.sprite = Resources.Load<Sprite>($"FrontImages\\{fName}\\{idx}\\{cdx}");
             frontImage.material = Resources.Load<Material>($"FrontEdges\\Edge{idx}");
         }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -37,6 +38,29 @@ public class GameManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         successUI.SetActive(false);
         failUI.SetActive(false);
+        SetTimerBasedOnScene();
+    }
+
+    private void SetTimerBasedOnScene()
+    {
+        string sceneName = SceneManager.GetActiveScene().name;
+
+        if (sceneName == "GameSceneE")
+        {
+            time = 45.00f;
+        }
+        else if (sceneName == "GameSceneH")
+        {
+            time = 25.00f;
+        }
+        else if(sceneName == "HobbyScene")
+        {
+            time = 45.00f;
+        }
+        else if(sceneName == "HobbySceneH")
+        {
+            time = 25.00f;
+        }
     }
 
     // Update is called once per frame

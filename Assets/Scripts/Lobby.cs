@@ -55,12 +55,12 @@ public class StageSelctionBtn : MonoBehaviour
         else if (HardBtn1 != null)
         {
             AudioManager.instance.ButtonPress(clip);
-            SceneManager.LoadScene("GameScene");
+            SceneManager.LoadScene("GameSceneH");
         }
         else if (HardBtn2 != null)
         {
             AudioManager.instance.ButtonPress(clip);
-            SceneManager.LoadScene("HobbyScene");
+            SceneManager.LoadScene("HobbySceneH");
         }
         else if (EasyBtn2 != null)
         {

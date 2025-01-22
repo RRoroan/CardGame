@@ -91,8 +91,8 @@ public class GameManager : MonoBehaviour
     bool isTest = true;
     public void Matched()
     {
-        if (isTest)
-            cardCount = 2;
+        //if (isTest)
+        //    cardCount = 2;
 
         string sceneName = SceneManager.GetActiveScene().name;
 

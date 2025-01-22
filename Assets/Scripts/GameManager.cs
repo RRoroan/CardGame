@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour
         TimeTextSet();
     }
 
-    bool isTest = true;
+    //bool isTest = true;
     public void Matched()
     {
         //if (isTest)
@@ -120,6 +120,7 @@ public class GameManager : MonoBehaviour
                 else  
                 {
                     ShowSuccessUI();
+                    IsClear.instance.clear();
                     if (AudioManager.instance != null)
                     { AudioManager.instance.SetMusicSpeed(1f); }
                 }

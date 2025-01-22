@@ -12,7 +12,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip ButtonClip;
     public AudioClip flip;
 
-
+    
     private void Awake()
     {
         if (instance == null)

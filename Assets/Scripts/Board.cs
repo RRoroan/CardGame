@@ -17,6 +17,15 @@ public class Board : MonoBehaviour
     void Start()
     {
         sceneName = SceneManager.GetActiveScene().name;
+        if (sceneName == "HiddenScene")
+        { CreateHidden(); }
+        else
+        { CreateNormal(); }
+
+    }
+
+    void CreateNormal()
+    {
         int[] arr = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 };
         arr = arr.OrderBy(x => Random.Range(0f, 7f)).ToArray();
 
@@ -36,7 +45,31 @@ public class Board : MonoBehaviour
 
             cardObjs.Add(go);
         }
+        GameManager.instance.cardCount = arr.Length;
 
+        StartCoroutine(ArrangeCo());
+    }
+    void CreateHidden()
+    {
+        int[] arr = { 0,0,1,1,2,2,3,3,4,4,5,5 };
+        arr = arr.OrderBy(x => Random.Range(0f, 7f)).ToArray();
+
+        for (int i = 0; i < 12; i++)
+        {
+            GameObject go = Instantiate(card, this.transform);
+            float x = (i % 4) * 1.4f - 2.1f;
+            float y = (i / 4) * 1.4f - 2.6f;
+            go.transform.position = Vector2.down;
+
+            Card goCard = go.GetComponent<Card>();
+            goCard.pos = new Vector2(x, y);
+            goCard.btn.enabled = false;
+            goCard.GetComponent<Animator>().enabled = false;
+
+            go.GetComponent<Card>().Setting(arr[i], sceneName);
+
+            cardObjs.Add(go);
+        }
         GameManager.instance.cardCount = arr.Length;
 
 
@@ -54,7 +87,8 @@ public class Board : MonoBehaviour
             Vector2 originPos = cardObjs[i].transform.position;
             Vector2 arrangePos = card.GetComponent<Card>().pos;
 
-            AudioManager.instance.FlipSound();
+            if (AudioManager.instance != null)
+            { AudioManager.instance.FlipSound(); }
             while (time < lerpValue)
             {
                 card.transform.position = Vector2.Lerp(originPos, arrangePos, time / lerpValue);

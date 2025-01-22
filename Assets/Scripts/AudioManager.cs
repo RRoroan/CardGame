@@ -10,7 +10,7 @@ public class AudioManager : MonoBehaviour
     AudioSource audioSource1;
     public AudioClip Background;
     public AudioClip ButtonClip;
-    public GameObject StartBtn;
+
 
     private void Awake()
     {

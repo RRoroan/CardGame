@@ -3,7 +3,14 @@ guid: 775f8e0d7793dd3449e1beb8e208d9ee
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - successUI: {instanceID: 0}
+  - failUI: {instanceID: 0}
+  - timeObj: {instanceID: 0}
+  - firstCard: {instanceID: 0}
+  - secondCard: {instanceID: 0}
+  - clipMatch: {fileID: 8300000, guid: 17ea3144a0884084d8b63d672fc7df4c, type: 3}
+  - clipNotMatch: {fileID: 8300000, guid: 7bef0064f8567430cac22499c6b93d4f, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

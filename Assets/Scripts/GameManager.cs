@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
     AudioSource audioSource;
-    public AudioClip clip;
+    public AudioClip clipMatch, clipNotMatch;
 
     bool timeIn10 = false;
     public bool isArrangeComplete;
@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
     {
         if (firstCard.idx == secondCard.idx && firstCard.cdx + secondCard.cdx != 3)
         {
-            audioSource.PlayOneShot(clip);
+            audioSource.PlayOneShot(clipMatch);
             firstCard.DestroyCard();
             secondCard.DestroyCard();
             cardCount -= 2;
@@ -78,6 +78,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            audioSource.PlayOneShot(clipNotMatch);
             firstCard.CloseCard();
             secondCard.CloseCard();
         }

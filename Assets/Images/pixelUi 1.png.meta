@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1ba66dd3a2d367e48bdb947c73733d17
+guid: 8f67f9613a1c4214194e1bcfd8a421e7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pixelUi_0
+      name: pixelUi 1_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 130
-        width: 156
-        height: 20
+        x: 20
+        y: 72
+        width: 52
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,19 +124,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12ea5bc38e75537419aa37be8859acc0
-      internalID: -385760168
+      spriteID: dad10d2ec14f82c40ae07631e75494e2
+      internalID: -1986404285
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelUi_7
+      name: pixelUi 1_1
       rect:
         serializedVersion: 2
-        x: 30
-        y: 82
-        width: 104
+        x: 15
+        y: 51
+        width: 58
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a573d847dfd1445a5d436210e526da
+      internalID: -1900602875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixelUi 1_2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 10
+        width: 62
         height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -145,50 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01a16a7175109a144870f7572d3e7751
-      internalID: 1465128705
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pixelUi_8
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 42
-        width: 116
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c32e56abb3ad14b4781d1e241978b57a
-      internalID: 561256653
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pixelUi_9
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 2
-        width: 116
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a034613e732a0f4791440849f0cc019
-      internalID: -238294428
+      spriteID: 6cf7f2b590edb864994088578b0351a2
+      internalID: 270460130
       vertices: []
       indices: 
       edges: []
@@ -204,16 +183,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      pixelUi_0: -385760168
-      pixelUi_1: -2047721780
-      pixelUi_2: -968155470
-      pixelUi_3: -283826230
-      pixelUi_4: 1995320174
-      pixelUi_5: -1972318308
-      pixelUi_6: -1607719402
-      pixelUi_7: 1465128705
-      pixelUi_8: 561256653
-      pixelUi_9: -238294428
+      pixelUi 1_0: -1986404285
+      pixelUi 1_1: -1900602875
+      pixelUi 1_2: 270460130
+      pixelUi 1_3: 713175701
+      pixelUi 1_4: 441137788
+      pixelUi 1_5: -1277182450
+      pixelUi 1_6: 765162067
+      pixelUi 1_7: 269190879
+      pixelUi 1_8: -1377477788
+      pixelUi 1_9: -398086759
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

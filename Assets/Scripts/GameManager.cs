@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject failUI;
 
     float time = 45.00f;
-    public Text timeTxt;
+    public GameObject timeObj;
 
     public Card firstCard, secondCard;
     public int cardCount;
@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1.0f;
+        audioSource = GetComponent<AudioSource>();
         successUI.SetActive(false);
         failUI.SetActive(false);
     }
@@ -48,7 +49,8 @@ public class GameManager : MonoBehaviour
             { AudioManager.instance.SetMusicSpeed(1f); }
             Time.timeScale = 0f;
         }
-        timeTxt.text = time.ToString("00.0");
+
+        TimeTextSet();
     }
 
     public void Matched()
@@ -73,6 +75,18 @@ public class GameManager : MonoBehaviour
             secondCard.CloseCard();
         }
         firstCard = secondCard = null;
+    }
+    private void TimeTextSet()
+    {
+        Text second = timeObj.transform.GetChild(0).GetComponent<Text>();
+        Text miniSecond = timeObj.transform.GetChild(2).GetComponent<Text>();
+
+        string secondString = Mathf.Ceil(time).ToString();
+        second.text = secondString.Length <= 1 ? "0" + secondString : secondString;
+
+        string timeToString = time.ToString("N2");
+        string miniSecondString = timeToString[timeToString.Length - 2].ToString() + timeToString[timeToString.Length - 1].ToString();
+        miniSecond.text = miniSecondString;
     }
 
     void ShowSuccessUI()

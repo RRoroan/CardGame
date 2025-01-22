@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public GameObject successUI;
     public GameObject failUI;
 
-    float time = 45f;
+    float time = 45.00f;
     public Text timeTxt;
 
     public Card firstCard, secondCard;
@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     AudioSource audioSource;
     public AudioClip clip;
+
+    bool timeIn10 = false;
 
     private void Awake()
     {
@@ -27,7 +29,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = AudioManager.instance.GetComponent<AudioSource>();
         Time.timeScale = 1.0f;
         successUI.SetActive(false);
         failUI.SetActive(false);
@@ -37,13 +38,17 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         time -= Time.deltaTime;
+        if (time < 10 &&  !timeIn10 && AudioManager.instance != null)
+        { AudioManager.instance.SetMusicSpeed(1.5f); }
         if (time <= 0)
         {
             time = 0;
             ShowFailUI();
+            if (AudioManager.instance != null)
+            { AudioManager.instance.SetMusicSpeed(1f); }
             Time.timeScale = 0f;
         }
-        timeTxt.text = time.ToString("N2");
+        timeTxt.text = time.ToString("00.0");
     }
 
     public void Matched()
@@ -56,6 +61,8 @@ public class GameManager : MonoBehaviour
             cardCount -= 2;
             if (cardCount == 0)
             {
+                if (AudioManager.instance != null)
+                { AudioManager.instance.SetMusicSpeed(1f); }
                 ShowSuccessUI();
                 Time.timeScale = 0f;
             }

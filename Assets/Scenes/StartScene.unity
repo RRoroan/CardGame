@@ -505,7 +505,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Background: {fileID: 8300000, guid: d51f627fc10ef01468b22c80f38a58a3, type: 3}
   ButtonClip: {fileID: 8300000, guid: 34eecadf8aa546a4196e70efb3e1d5cc, type: 3}
-  StartBtn: {fileID: 57769261}
 --- !u!82 &331831249
 AudioSource:
   m_ObjectHideFlags: 0
@@ -520,7 +519,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 0.503
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

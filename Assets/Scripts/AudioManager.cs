@@ -35,4 +35,6 @@ public class AudioManager : MonoBehaviour
         audioSource1.PlayOneShot(ButtonClip);
     }
     
+    public void SetMusicSpeed(float speed)
+    { audioSource1.pitch = speed; }
 }

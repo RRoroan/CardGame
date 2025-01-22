@@ -360,6 +360,7 @@ MonoBehaviour:
   back: {fileID: 1862715116137073421}
   anim: {fileID: 1316001779576390387}
   clip: {fileID: 8300000, guid: 453432f83352c924389b81bf640ed1ea, type: 3}
+  btn: {fileID: 2807242386816397261}
 --- !u!95 &1316001779576390387
 Animator:
   serializedVersion: 5

@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
     AudioSource audioSource1;
     public AudioClip Background;
     public AudioClip ButtonClip;
+    public AudioClip flip;
 
 
     private void Awake()
@@ -33,6 +34,11 @@ public class AudioManager : MonoBehaviour
     public void ButtonPress(AudioClip clip)
     {
         audioSource1.PlayOneShot(ButtonClip);
+    }
+
+    public void FlipSound()
+    {
+        audioSource1.PlayOneShot(flip);
     }
     
     public void SetMusicSpeed(float speed)

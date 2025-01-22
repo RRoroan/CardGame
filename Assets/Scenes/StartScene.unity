@@ -509,6 +509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Background: {fileID: 8300000, guid: d51f627fc10ef01468b22c80f38a58a3, type: 3}
   ButtonClip: {fileID: 8300000, guid: 34eecadf8aa546a4196e70efb3e1d5cc, type: 3}
+  flip: {fileID: 8300000, guid: 453432f83352c924389b81bf640ed1ea, type: 3}
 --- !u!82 &331831249
 AudioSource:
   m_ObjectHideFlags: 0

@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public AudioClip clip;
 
     bool timeIn10 = false;
+    public bool isArrangeComplete;
 
     private void Awake()
     {
@@ -30,6 +31,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1.0f;
+
+        isArrangeComplete = false;
+
         audioSource = GetComponent<AudioSource>();
         successUI.SetActive(false);
         failUI.SetActive(false);
@@ -38,6 +42,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isArrangeComplete)
+            return;
+
         time -= Time.deltaTime;
         if (time < 10 &&  !timeIn10 && AudioManager.instance != null)
         { AudioManager.instance.SetMusicSpeed(1.5f); }
@@ -81,7 +88,7 @@ public class GameManager : MonoBehaviour
         Text second = timeObj.transform.GetChild(0).GetComponent<Text>();
         Text miniSecond = timeObj.transform.GetChild(2).GetComponent<Text>();
 
-        string secondString = Mathf.Ceil(time).ToString();
+        string secondString = Mathf.Floor(time).ToString();
         second.text = secondString.Length <= 1 ? "0" + secondString : secondString;
 
         string timeToString = time.ToString("N2");

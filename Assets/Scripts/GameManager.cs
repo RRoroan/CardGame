@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject successUI;
     public GameObject failUI;
+    public GameObject hiddenUI;
 
     float time = 45.00f;
     public GameObject timeObj;
@@ -89,6 +90,8 @@ public class GameManager : MonoBehaviour
 
     public void Matched()
     {
+        string sceneName = SceneManager.GetActiveScene().name;
+
         if (firstCard.idx == secondCard.idx && firstCard.cdx + secondCard.cdx != 3)
         {
             audioSource.PlayOneShot(clipMatch);
@@ -97,9 +100,26 @@ public class GameManager : MonoBehaviour
             cardCount -= 2;
             if (cardCount == 0)
             {
-                if (AudioManager.instance != null)
-                { AudioManager.instance.SetMusicSpeed(1f); }
-                ShowSuccessUI();
+               
+                if (sceneName == "HobbySceneH" && time > 5)
+                {
+                    ShowHiddenUI();
+                    if (AudioManager.instance != null)
+                    { AudioManager.instance.SetMusicSpeed(1f); }
+                }
+                else if (sceneName == "GameSceneH" && time > 5)
+                {
+                    ShowHiddenUI();
+                    if (AudioManager.instance != null)
+                    { AudioManager.instance.SetMusicSpeed(1f); }
+                }
+                else  
+                {
+                    ShowSuccessUI();
+                    if (AudioManager.instance != null)
+                    { AudioManager.instance.SetMusicSpeed(1f); }
+                }
+                
                 Time.timeScale = 0f;
             }
         }
@@ -124,6 +144,10 @@ public class GameManager : MonoBehaviour
         miniSecond.text = miniSecondString;
     }
 
+    void ShowHiddenUI()
+    {
+        hiddenUI.SetActive(true);
+    }
     void ShowSuccessUI()
     {
         successUI.SetActive(true);

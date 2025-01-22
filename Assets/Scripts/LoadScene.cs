@@ -17,4 +17,9 @@ public class LoadScene : MonoBehaviour
         string sceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(sceneName);
     }
+    public void HiddenScene()
+    {
+        AudioManager.instance.ButtonPress(clip);
+        SceneManager.LoadScene("HiddenScene");
+    }
 }

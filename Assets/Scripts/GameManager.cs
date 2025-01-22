@@ -53,11 +53,11 @@ public class GameManager : MonoBehaviour
         {
             time = 25.00f;
         }
-        else if(sceneName == "HobbyScene")
+        else if (sceneName == "HobbyScene")
         {
             time = 45.00f;
         }
-        else if(sceneName == "HobbySceneH")
+        else if (sceneName == "HobbySceneH")
         {
             time = 25.00f;
         }
@@ -70,8 +70,11 @@ public class GameManager : MonoBehaviour
             return;
 
         time -= Time.deltaTime;
-        if (time < 10 &&  !timeIn10 && AudioManager.instance != null)
-        { AudioManager.instance.SetMusicSpeed(1.5f); }
+        if (time < 10 && !timeIn10 && AudioManager.instance != null)
+        {
+            AudioManager.instance.SetMusicSpeed(1.5f);
+            timeIn10 = true;
+        }
         if (time <= 0)
         {
             time = 0;

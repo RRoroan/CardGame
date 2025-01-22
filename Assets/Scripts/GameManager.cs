@@ -88,8 +88,12 @@ public class GameManager : MonoBehaviour
         TimeTextSet();
     }
 
+    bool isTest = true;
     public void Matched()
     {
+        if (isTest)
+            cardCount = 2;
+
         string sceneName = SceneManager.GetActiveScene().name;
 
         if (firstCard.idx == secondCard.idx && firstCard.cdx + secondCard.cdx != 3)

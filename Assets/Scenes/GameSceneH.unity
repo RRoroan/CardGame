@@ -718,6 +718,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HiddenUI
       objectReference: {fileID: 0}
+    - target: {fileID: 8605718500074608182, guid: d3d20b0e63c425342bdb306e307d2f6f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8752897775644135201, guid: d3d20b0e63c425342bdb306e307d2f6f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

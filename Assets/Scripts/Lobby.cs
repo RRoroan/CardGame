@@ -9,6 +9,10 @@ public class StageSelctionBtn : MonoBehaviour
     public GameObject HobbyBtn;
     public GameObject StartBtn;
     public AudioClip clip;
+    public GameObject EasyBtn1;
+    public GameObject HardBtn1;
+    public GameObject HardBtn2;
+    public GameObject EasyBtn2;
 
     private void Start()
     {
@@ -23,14 +27,42 @@ public class StageSelctionBtn : MonoBehaviour
         StartBtn.SetActive(false);
     }
 
+
+    public void GameModeSelect()
+    {
+        AudioManager.instance.ButtonPress(clip);
+        GameBtn.SetActive(false);
+        HobbyBtn.SetActive(false);
+        EasyBtn1.SetActive(true);
+        HardBtn1.SetActive(true);
+    }
+
+    public void HobbyModeSelect()
+    {
+        AudioManager.instance.ButtonPress(clip);
+        GameBtn.SetActive(false);
+        HobbyBtn.SetActive(false);
+        EasyBtn2.SetActive(true);
+        HardBtn2.SetActive(true);
+    }
     public void SceneChange()
     {
-        if (GameBtn != null)
+        if (EasyBtn1 != null)
         {
             AudioManager.instance.ButtonPress(clip);
             SceneManager.LoadScene("GameScene");
         }
-        else if (HobbyBtn != null)
+        else if (HardBtn1 != null)
+        {
+            AudioManager.instance.ButtonPress(clip);
+            SceneManager.LoadScene("GameScene");
+        }
+        else if (HardBtn2 != null)
+        {
+            AudioManager.instance.ButtonPress(clip);
+            SceneManager.LoadScene("HobbyScene");
+        }
+        else if (EasyBtn2 != null)
         {
             AudioManager.instance.ButtonPress(clip);
             SceneManager.LoadScene("HobbyScene");

@@ -27,11 +27,29 @@ public class Card : MonoBehaviour
         idx = num / 4;
         cdx = num % 4;
         if (sceneName == "GameScene")
-        { fName = "Game"; }
-        else
-        { fName = "Hobby"; }
-        frontImage.sprite = Resources.Load<Sprite>($"FrontImages\\{fName}\\{idx}\\{cdx}");
-        frontImage.material = Resources.Load<Material>($"FrontEdges\\Edge{idx}");
+        {
+            fName = "Game";
+            frontImage.sprite = Resources.Load<Sprite>($"FrontImages\\{fName}\\{idx}\\{cdx}");
+            frontImage.material = Resources.Load<Material>($"FrontEdges\\Edge{idx}");
+        }
+        else if (sceneName == "HobbyScene")
+        {
+            fName = "Hobby";
+            frontImage.sprite = Resources.Load<Sprite>($"FrontImages\\{fName}\\{idx}\\{cdx}");
+            frontImage.material = Resources.Load<Material>($"FrontEdges\\Edge{idx}");
+        }
+        else if (sceneName == "GameSceneH")
+        {
+            fName = "Game";
+            frontImage.sprite = Resources.Load<Sprite>($"FrontImages\\{fName}\\{idx}\\{cdx}");
+            frontImage.material = Resources.Load<Material>($"FrontEdges\\Edge{idx}");
+        }
+        else if (sceneName == "HobbySceneH")
+        {
+            fName = "Hobby";
+            frontImage.sprite = Resources.Load<Sprite>($"FrontImages\\{fName}\\{idx}\\{cdx}");
+            frontImage.material = Resources.Load<Material>($"FrontEdges\\Edge{idx}");
+        }
     }
 
     public void OpenCard()

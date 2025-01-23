@@ -977,10 +977,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HiddenSuccessUI
       objectReference: {fileID: 0}
-    - target: {fileID: 8556148055504124163, guid: ac48c65b8d8f95249b344b6dd4bca291, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -155,6 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   successUI: {fileID: 835475166}
   failUI: {fileID: 1077859461}
+  hiddenUI: {fileID: 0}
   timeObj: {fileID: 310467318}
   firstCard: {fileID: 0}
   secondCard: {fileID: 0}
@@ -690,10 +691,6 @@ PrefabInstance:
     - target: {fileID: 8556148055504124163, guid: 242f6e90eb0e2494b91ecc62cf8eadbb, type: 3}
       propertyPath: m_Name
       value: HobbySuccessUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 8556148055504124163, guid: 242f6e90eb0e2494b91ecc62cf8eadbb, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
